@@ -1,0 +1,24 @@
+/* --------------------- */
+/* Components */
+/* --------------------- */
+
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+/* --------------------- */
+/* Page Specific Backgrounds */
+/* --------------------- */
+
+body {
+  background-size: cover;
+}
+
+/* --------------------- */
+/* Layout */
+/* --------------------- */
+
+.container-main {
+  padding-inline: 1rem;
+  padding-bottom: 4rem;
+}

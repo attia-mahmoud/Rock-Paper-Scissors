@@ -1,0 +1,138 @@
+/* --------------------- */
+/* Font Imports */
+/* --------------------- */
+
+/* --------------------- */
+/* Custom Properties */
+/* --------------------- */
+
+:root {
+  /* colors */
+
+  /* font-sizes */
+
+  /* font-families */
+}
+
+/* --------------------- */
+/* Tablet Size */
+/* --------------------- */
+@media (min-width: 35em) {
+  /* font-sizes */
+  :root {
+  }
+}
+
+/* --------------------- */
+/* Desktop Size */
+/* --------------------- */
+@media (min-width: 45rem) {
+  /* font-sizes */
+  :root {
+  }
+}
+
+/* Set core body defaults */
+body {
+  /* font-family: ; */
+  /* font-size: ; */
+  /* background-color: ; */
+  /* color: ; */
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+}
+
+/* --------------------- */
+/* Utility Classes */
+/* --------------------- */
+
+/* colors */
+
+/* typography */
+
+.letter-spacing-1 {
+  letter-spacing: 2.5px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2px;
+}
+.letter-spacing-3 {
+  letter-spacing: 1.5px;
+}
+
+.line-height-1 {
+  line-height: 2.5;
+}
+.line-height-2 {
+  line-height: 2;
+}
+.line-height-3 {
+  line-height: 1.7;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.d-block {
+  display: block;
+}
+
+/* select everything that has an adjacent sibling before it */
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space--small {
+  --flow-space: 0.5rem;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* screen reader mode only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}

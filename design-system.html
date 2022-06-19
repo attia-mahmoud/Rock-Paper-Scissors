@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="flex">
+      <div class="title fw-700">
+        <span class="d-block">Rock</span>
+        <span class="d-block">Paper</span>
+        <span class="d-block">Scissors</span>
+      </div>
+      <div class="score flex">
+        <p class="uppercase fw-700 letter-spacing-3">Score</p>
+        <h1 id="count">0</h1>
+      </div>
+    </header>
+    <main class="grid">
+      <div class="options paper" data-id="paper"></div>
+      <div class="options scissors" data-id="scissors"></div>
+      <div class="gameover">
+        <p class="result">YOU LOSE</p>
+        <button class="playagain">PLAY AGAIN</button>
+      </div>
+    </main>
+  </body>
+</html>

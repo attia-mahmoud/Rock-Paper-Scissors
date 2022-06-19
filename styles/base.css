@@ -1,17 +1,28 @@
 /* --------------------- */
 /* Font Imports */
 /* --------------------- */
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
 /* --------------------- */
 /* Custom Properties */
 /* --------------------- */
 
 :root {
   /* colors */
-
+  --clr-yellow-100: hsl(39, 89%, 49%);
+  --clr-yellow-200: hsl(40, 84%, 53%);
+  --clr-blue-100: hsl(230, 89%, 62%);
+  --clr-blue-200: hsl(230, 89%, 65%);
+  --clr-red-100: hsl(349, 71%, 52%);
+  --clr-red-200: hsl(349, 70%, 56%);
+  --clr-text: hsl(229, 25%, 31%);
+  --clr-score: hsl(229, 64%, 46%);
+  --clr-grey: hsl(217, 16%, 45%);
+  --clr-radial-100: hsl(214, 47%, 23%);
+  --clr-radial-200: hsl(237, 49%, 15%);
   /* font-sizes */
 
   /* font-families */
+  --ff-barlow: "Barlow Semi Condensed", sans-serif;
 }
 
 /* --------------------- */
@@ -34,10 +45,13 @@
 
 /* Set core body defaults */
 body {
-  /* font-family: ; */
-  /* font-size: ; */
-  /* background-color: ; */
-  /* color: ; */
+  font-family: var(--ff-barlow);
+  font-size: 1rem;
+  background-image: radial-gradient(
+    var(--clr-radial-100),
+    var(--clr-radial-200)
+  );
+  color: var(--clr-text);
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   min-height: 100vh;
@@ -53,6 +67,9 @@ body {
 /* --------------------- */
 
 /* colors */
+.grey {
+  color: var(--clr-grey);
+}
 
 /* typography */
 

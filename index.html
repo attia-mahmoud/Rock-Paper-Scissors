@@ -15,28 +15,32 @@
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
-    <body>
-      <header class="flex">
-        <div class="title fw-700">
-          <span class="d-block">Rock</span>
-          <span class="d-block">Paper</span>
-          <span class="d-block">Scissors</span>
-        </div>
-        <div class="score flex">
-          <p class="uppercase fw-700 letter-spacing-3">Score</p>
-          <h1 id="count">0</h1>
-        </div>
-      </header>
-      <main class="grid main-background">
-        <div class="options paper" data-id="paper" onclick="select(this)"></div>
-        <div class="options scissors" data-id="scissors" onclick="select(this)"></div>
-        <div class="options rock" data-id="rock" style="grid-column: 1/3;" onclick="select(this)"></div>
-      </main>
-      <footer class="flex">
-        <div class="rules letter-spacing-1">Rules</div>
-      </footer>
   </head>
-
+  <body>
+    <header class="flex">
+      <img class="title" src="./images/logo.svg" alt="logo" />
+      <div class="score flex">
+        <p class="uppercase fw-700 letter-spacing-3">Score</p>
+        <h1 id="count">0</h1>
+      </div>
+    </header>
+    <main class="grid main-background">
+      <div class="options paper" data-id="paper" onclick="select(this)"></div>
+      <div
+        class="options scissors"
+        data-id="scissors"
+        onclick="select(this)"
+      ></div>
+      <div
+        class="options rock"
+        data-id="rock"
+        style="grid-column: 1/3"
+        onclick="select(this)"
+      ></div>
+    </main>
+    <footer class="flex">
+      <div class="rules letter-spacing-1">Rules</div>
+    </footer>
   </body>
   <script type="text/javascript" src="game.js"></script>
   <script type="text/javascript" src="index.js"></script>

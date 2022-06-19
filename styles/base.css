@@ -48,7 +48,8 @@ body {
   font-family: var(--ff-barlow);
   font-size: 1rem;
   background-image: radial-gradient(
-    var(--clr-radial-100),
+    circle at top,
+    var(--clr-radial-100) 200px,
     var(--clr-radial-200)
   );
   color: var(--clr-text);

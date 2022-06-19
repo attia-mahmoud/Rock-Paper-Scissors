@@ -37,12 +37,24 @@ function computerTurn() {
   el.classList.add("options", "empty");
   main.appendChild(el);
   const computerMove = computerPlay();
+  shuffle();
   setTimeout(function () {
-    el.classList.remove("empty");
-    el.classList.add(computerMove);
+    el.className = "";
+    el.classList.add("options", computerMove);
     createCaption(el, "The House Picked");
   }, 1000);
   return computerMove;
+}
+
+function shuffle() {
+  let x = 0;
+  let intervalID = window.setInterval(function () {
+    el.className = "";
+    el.classList.add("options", computerPlay());
+    if (++x === 10) {
+      window.clearInterval(intervalID);
+    }
+  }, 100);
 }
 
 function playerTurn(selection) {

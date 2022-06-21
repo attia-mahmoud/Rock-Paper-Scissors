@@ -1,18 +1,16 @@
 let selections = document.querySelectorAll(".options");
 const main = document.querySelector("main");
 const score = document.querySelector("#count");
+let play = true;
+setInterval(getSelections, 100);
 
 function getSelections() {
   selections = document.querySelectorAll(".options");
 }
 
-setInterval(getSelections, 1000);
-
-selections.forEach((selection) => {
-  selection.addEventListener("click", function () {});
-});
-
 function select(event) {
+  if (!play) return;
+  play = false;
   const playerMove = playerTurn(event);
   const computerMove = computerTurn();
   const result = playRound(playerMove, computerMove);
@@ -29,7 +27,7 @@ function select(event) {
         gameOver("ITS A TIE");
         break;
     }
-  }, 1000);
+  }, 2000);
 }
 
 function computerTurn() {
@@ -42,7 +40,7 @@ function computerTurn() {
     el.className = "";
     el.classList.add("options", computerMove);
     createCaption(el, "The House Picked");
-  }, 1000);
+  }, 2000);
   return computerMove;
 }
 
@@ -51,7 +49,7 @@ function shuffle() {
   let intervalID = window.setInterval(function () {
     el.className = "";
     el.classList.add("options", computerPlay());
-    if (++x === 10) {
+    if (++x === 20) {
       window.clearInterval(intervalID);
     }
   }, 100);
@@ -92,6 +90,7 @@ function gameOver(msg) {
 }
 
 function reset() {
+  play = true;
   main.innerHTML = "";
   main.classList.add("main-background");
   addSelection("paper");

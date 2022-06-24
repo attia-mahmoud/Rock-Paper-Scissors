@@ -2,9 +2,9 @@
 /* Components */
 /* --------------------- */
 
-.title {
-  height: 60%;
-  margin-left: 1rem;
+.logo {
+  height: 80%;
+  margin-left: 0.5rem;
 }
 
 .score {
@@ -13,8 +13,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  width: 5rem;
-  height: 5rem;
+  width: 20%;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -22,19 +22,20 @@
   margin-top: 0.5rem;
   margin-bottom: -0.7rem;
   color: var(--clr-score);
-  font-size: 0.7rem;
+  font-size: min(3vw, 1.5rem);
 }
 
 .score > h1 {
-  font-size: 3rem;
+  font-size: min(7vw, 5rem);
 }
 
 .options {
-  height: 8rem;
+  height: 26vw;
+  max-height: 12rem;
   aspect-ratio: 1;
   background-color: white;
   border-radius: 50%;
-  border: 15px solid transparent;
+  border: 3vw solid transparent;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: inset 0px 19px 42px -24px rgba(0, 0, 0, 0.71);
@@ -81,6 +82,7 @@
   letter-spacing: 2.5px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .empty {
@@ -113,16 +115,13 @@ body {
 /* Layout */
 /* --------------------- */
 
-.container-main {
-  padding-inline: 1rem;
-  padding-bottom: 4rem;
-}
-
 header {
+  width: 80%;
+  max-width: 50rem;
   justify-content: space-between;
   align-items: center;
-  height: 7rem;
-  width: 80%;
+  height: 20vw;
+  max-height: 10rem;
   margin-top: 2rem;
   padding: 0.5rem;
   border: 3px solid var(--clr-grey);
@@ -131,6 +130,9 @@ header {
 }
 
 main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40rem;
   height: 50%;
   transform: translate(0, 25%);
   grid-template-rows: repeat(2, 10rem);
@@ -150,4 +152,33 @@ footer {
   justify-content: center;
   margin-top: -5rem;
   font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .options {
+    border-width: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    height: 70%;
+    grid-template-rows: repeat(2, 12rem);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-background {
+    background-size: 21rem;
+    background-position: 50% 35%;
+  }
+
+  .caption {
+    bottom: -120%;
+    left: 8%;
+  }
+
+  footer {
+    justify-content: flex-end;
+    margin-inline: 5rem;
+  }
 }

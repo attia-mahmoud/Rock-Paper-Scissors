@@ -39,8 +39,13 @@
       ></div>
     </main>
     <footer class="flex">
-      <div class="rules letter-spacing-1">Rules</div>
+      <div class="rules letter-spacing-1" onclick="showRules()">RULES</div>
     </footer>
+    <div id="overlay">
+      <p class="fw-900">RULES</p>
+      <img src="./images/image-rules.svg" alt="rules" />
+      <div class="cross" onclick="removeRules()"></div>
+    </div>
   </body>
   <script type="text/javascript" src="game.js"></script>
   <script type="text/javascript" src="index.js"></script>

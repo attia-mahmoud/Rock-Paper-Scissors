@@ -106,3 +106,11 @@ function addSelection(data, position = 0) {
   position && el.classList.add("rock-position");
   main.appendChild(el);
 }
+
+function showRules() {
+  document.getElementById("overlay").style.display = "flex";
+}
+
+function removeRules() {
+  document.getElementById("overlay").style.display = "none";
+}

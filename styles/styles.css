@@ -30,6 +30,8 @@
 }
 
 .options {
+  display: flex;
+  justify-content: center;
   height: 26vw;
   max-height: 12rem;
   aspect-ratio: 1;
@@ -40,8 +42,15 @@
   background-position: center;
   box-shadow: inset 0px 19px 42px -24px rgba(0, 0, 0, 0.71);
   cursor: pointer;
-  position: relative;
   transition: display 300ms ease-out;
+}
+
+.caption {
+  margin-top: min(26vw, 12rem);
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .paper {
@@ -88,19 +97,6 @@
 .empty {
   background-color: var(--clr-radial-100);
   border: none;
-}
-
-.caption {
-  position: absolute;
-  text-align: center;
-  bottom: -170%;
-  left: -12%;
-  width: 8rem;
-  height: 8rem;
-  color: white;
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 1px;
 }
 
 /* --------------------- */

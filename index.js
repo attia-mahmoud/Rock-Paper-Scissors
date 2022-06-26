@@ -39,7 +39,7 @@ function computerTurn() {
   setTimeout(function () {
     el.className = "";
     el.classList.add("options", computerMove);
-    createCaption(el, "The House Picked");
+    createCaption(el, "I Picked");
   }, 2000);
   return computerMove;
 }

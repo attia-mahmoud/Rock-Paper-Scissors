@@ -94,6 +94,10 @@
   cursor: pointer;
 }
 
+.playagain:hover {
+  color: var(--clr-red-200);
+}
+
 .empty {
   background-color: var(--clr-radial-100);
   border: none;
@@ -216,13 +220,26 @@ footer {
     background-position: 50% 35%;
   }
 
-  .caption {
-    bottom: -120%;
-    left: 8%;
-  }
-
   footer {
     justify-content: flex-end;
     margin-inline: 5rem;
+  }
+
+  #overlay {
+    position: fixed;
+    width: 30rem; /* Full width (cover the whole page) */
+    height: 30rem; /* Full height (cover the whole page) */
+    margin-inline: auto;
+    transform: translateY(50%);
+    border-radius: 15px;
+  }
+
+  #overlay > p {
+    align-self: flex-start;
+    margin-left: 2rem;
+  }
+
+  #overlay > img {
+    height: 50%;
   }
 }

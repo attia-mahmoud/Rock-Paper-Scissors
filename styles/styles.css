@@ -58,14 +58,29 @@
   border-color: var(--clr-blue-100);
 }
 
+.paper:hover {
+  box-shadow: inset 0px 19px 42px -24px rgba(0, 0, 0, 0.71),
+    0 5px 25px var(--clr-blue-100);
+}
+
 .scissors {
   background-image: url("../images/icon-scissors.svg");
   border-color: var(--clr-yellow-100);
 }
 
+.scissors:hover {
+  box-shadow: inset 0px 19px 42px -24px rgba(0, 0, 0, 0.71),
+    0 5px 25px var(--clr-yellow-100);
+}
+
 .rock {
   background-image: url("../images/icon-rock.svg");
   border-color: var(--clr-red-100);
+}
+
+.rock:hover {
+  box-shadow: inset 0px 19px 42px -24px rgba(0, 0, 0, 0.71),
+    0 5px 25px var(--clr-red-100);
 }
 
 .rock-position {
